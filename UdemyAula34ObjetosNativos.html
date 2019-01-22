@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        
+        <script src="beluga.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>
+        
+        <script>
+            
+            
+            // Primeiro Exemplo :
+
+            /*var hoje = new Date();
+
+            var x = 0;
+
+            function mudaX(x){
+                
+               console.log('mudarX', x);
+            }
+            mudaX(10);
+
+            console.log('x: ', x);*/
+
+
+            
+            // Segundo Exemplo:
+            /*var hoje = new Date();
+            console.log(hoje);
+            
+            var x = 0;
+
+            function mudaX(x){
+                y = x;
+               console.log('mudarX', y);
+            }
+            mudaX(10);
+
+            console.log('x: ', x);*/
+
+            
+            
+            //Terceiro Exemplo:
+            /*var hoje = new Date();
+
+            var x = [0];
+
+            function mudaX(x){
+               
+               var y = x;
+               y.push(2);  
+               x.push(3);
+               console.log('mudarX');
+               console.log(x);
+               console.log(y);
+            }
+            mudaX(x);
+
+            console.log('x: ');
+            console.log(x);
+            */
+
+            console.log("-------------------------");
+
+            function mudarCor(cor){
+                this.cor = cor;
+            }
+
+           function Caneta(cor, preco, qtd){
+               this.cor = cor;
+               this.preco = preco;
+               this.qtd = qtd;
+            }
+
+            var can = new Caneta(cor, preco, qtd);
+
+
+            
+            
+            caneta1.mudarCor('Green');
+            console.log(caneta1);
+
+        </script>
+        
+    </body>
+</html>
