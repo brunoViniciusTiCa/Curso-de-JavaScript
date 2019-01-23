@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        
+        <script src="beluga.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>
+        
+        <script>
+
+            /*function Pessoa(nome, sobrenome){
+                 this.nome = nome;
+                 this.sobrenome = sobrenome;
+            };
+    
+            var pessoa1 = new Pessoa('Bruno ' , 'Vinicius');
+            var pessoa2 = new Pessoa('Vitor ' , 'Gabriel'); 
+            var pessoa3 = new Pessoa('Maria ' , 'Clarissa');  
+
+           for (var i = 1; i <= 3; i++) {
+            console.log(window["pessoa"+i].nome +' '+ window["pessoa"+i].sobrenome);
+           };*/
+
+           function Pessoa(nome, sobrenome){
+                 this.nome = nome;
+                 this.sobrenome = sobrenome;
+            };
+    
+            var pessoa1 = new Pessoa('Bruno ' , 'Vinicius');
+            var pessoa2 = new Pessoa('Vitor ' , 'Gabriel'); 
+            var pessoa3 = new Pessoa('Maria ' , 'Clarissa');
+          
+          var pessoas = [
+              
+              pessoa1, 
+              pessoa2, 
+              pessoa3
+
+          ];
+
+          var x = 0;
+          while(pessoas[x]){
+             console.log(pessoas[x].nome + ' ' + pessoas[x].sobrenome);   
+             x++
+          }
+    
+
+          
+
+             
+            
+
+        </script>
+        
+    </body>
+</html>

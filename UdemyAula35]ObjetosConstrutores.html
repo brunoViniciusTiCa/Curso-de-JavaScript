@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        
+        <script src="beluga.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>
+        
+        <script>
+
+            function Caneta(cor, preco){
+               
+               var color = cor || 'black'; 
+               this.preco = preco || 9;
+               
+               this.mudarCor = function(cor){
+                   if((cor !== 'red') && (cor !== 'black') && (cor !== 'green')){
+                       console.log("Cores não cadastradas!");
+                       return;
+                   }
+                   else{
+                    color = cor;
+                   }
+                  
+               }
+               this.pegarCor = function(){
+                   return color;
+               }
+            }
+            
+            var caneta1 = new Caneta();
+            var caneta2 = new Caneta('blue', 3);
+           
+            function mudarCor(cor){
+                this.cor = cor;
+            }
+    
+           
+
+
+            
+
+        </script>
+        
+    </body>
+</html>
