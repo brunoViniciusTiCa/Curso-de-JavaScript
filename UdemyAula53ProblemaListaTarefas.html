@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <title> Curso Java Script 2018 </title>
+          <meta charset="utf-8">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1> Curso JavaScript 2018 </h1>
+
+            <input type="text" id="txtTask">    
+            <button id="btn1"> Cadastrar Tarefa </button> 
+            <ul>
+                <li>Estudar JavaScript - DOM</li>
+                <li>Estudar Eventos em JavaScript</li>
+                <li>Jogar vídeo Game</li>
+            </ul>
+          
+        </div>
+ 
+        <script>
+           
+
+            (function(){
+
+                'use strict'
+
+                var $ul      = document.querySelector('ul');
+                var $txtTask = document.getElementById('txtTask');
+                var $btn1    = document.getElementById('btn1');
+
+                $btn1.addEventListener('click', function(){
+                    var task = '<li>' + $txtTask.value + '</li>';
+                    $ul.innerHTML += task;
+                    
+                    $txtTask.value = "";
+                    $txtTask.focus();
+                })
+              
+
+            })()
+            
+        </script>
+    </body>
+</html>
