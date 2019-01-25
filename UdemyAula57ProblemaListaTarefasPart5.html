@@ -46,7 +46,7 @@
     });
     
     for(var i = 0; i < $lis.length; i++){
-        $lis[i].addEventListener('click', toogleDone)
+        addEvent($lis[i]);
     }
     
     function toogleDone(){
@@ -54,10 +54,21 @@
     }
     
     function addTask(){
-        var task = '<li>' + $txtTask.value + '</li>';
         
+        var li = document.createElement('li');
+        var text = document.createTextNode( $txtTask.value);
+        
+        li.appendChild(text);
+        $ul.appendChild(li);
+
         $txtTask.value = '';
         $txtTask.focus();
+
+        addEvent(li);
+    }
+
+    function addEvent(li){
+        li.addEventListener('click', toogleDone);
     }
     
     
