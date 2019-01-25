@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <title> Curso Java Script 2018 </title>
+          <meta charset="utf-8">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1> Curso JavaScript 2018 </h1>
+            
+            <form action="#">
+                <textarea cols="50" rows="10" readonly>Contrato de serviço prestados.
+                </textarea>
+
+                <label>
+                        <br> <input type="checkbox" id="chbox" checked> li e aceito os termos do contrato. 
+                </label>
+                        <br> <input type="submit" value="continuar" id='btn'>
+            </form>    
+
+        </div>
+ 
+        <script>
+            
+            (function(){
+                'use strict'
+                    
+                    var $btn = document.getElementById('btn');
+                    var $chbox = document.getElementById('chbox');
+
+                    togglebtn();
+                   
+                    $chbox.addEventListener('change', function(){
+                       togglebtn();
+                    });
+
+                    function togglebtn(){
+                        $btn.disabled = !chbox.checked
+                    };
+            })()
+        
+        
+        </script>
+
+
+
+
+    </body>
+</html>

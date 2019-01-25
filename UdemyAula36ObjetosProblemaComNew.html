@@ -17,7 +17,33 @@
         
         <script>
 
-        
+            function Caneta(cor, preco){
+               
+               var color = cor || 'black'; 
+               this.preco = preco || 9;
+               
+               this.mudarCor = function(cor){
+                   if((cor !== 'red') && (cor !== 'black') && (cor !== 'green')){
+                       console.log("Cores não cadastradas!");
+                       return;
+                   }
+                   else{
+                    color = cor;
+                   }
+                  
+               }
+               this.pegarCor = function(){
+                   return color;
+               }
+            }
+            
+            var caneta1 = new Caneta();
+            var caneta2 = new Caneta('blue', 3);
+           
+            function mudarCor(cor){
+                this.cor = cor;
+            }
+    
         </script>
         
     </body>

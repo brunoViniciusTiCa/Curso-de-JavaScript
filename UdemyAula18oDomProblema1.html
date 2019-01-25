@@ -11,15 +11,24 @@
         <div id="msg"></div>
     
         <script>
-           (function(){
-             
+            //Função de CalBack
+            (function(){
              var nome = prompt("Qual é seu nome?");
+             if (nome === ""){
+               alert('Digite seu nome:');
+             }
              var idade = prompt("Qual sua idade?");
+             if (idade === ""){
+               alert('Digite sua idade:');
+             }
              var endereco = prompt("Qual seu endereço?");
-             document.querySelector('#msg').textContent = 'Bem-vindo, ' + nome + 'Sua idade é : ' + idade + 'Seu endereço é :' + endereco;
-
-           })()
+            if (endereco === ""){
+               alert('Digite seu endereço');
+            }
+             else{
+             document.querySelector('#msg').textContent = 'Bem-vindo, ' + nome + '.  Sua idade é : ' + idade + '. Seu endereço é  :  ' + endereco + ".";
+             }
+            })()
          </script>
-
     </body>
 </html> 
