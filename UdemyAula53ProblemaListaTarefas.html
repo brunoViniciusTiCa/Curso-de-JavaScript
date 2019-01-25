@@ -20,10 +20,7 @@
         </div>
  
         <script>
-           
-
-            (function(){
-
+           (function(){
                 'use strict'
 
                 var $ul      = document.querySelector('ul');
@@ -31,9 +28,11 @@
                 var $btn1    = document.getElementById('btn1');
 
                 $btn1.addEventListener('click', function(){
+                    
                     var task = '<li>' + $txtTask.value + '</li>';
                     $ul.innerHTML += task;
                     
+                    // Limpar e voltar o cursor do mouse para o Campo.
                     $txtTask.value = "";
                     $txtTask.focus();
                 })
