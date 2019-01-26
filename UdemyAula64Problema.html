@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+     <head>
+         <title> Curso JavaScript 2018</title>
+         <meta charset="utf-8">
+
+         <script>
+         
+           var nome = "Bruno Vinicius Felix";
+           
+           var nomeFormatado = formatarNome(nome);
+
+        function formatarNome(nome){
+            
+            var posicaoUltimoEspaco = nome.lastIndexOf(' ');
+            if(posicaoUltimoEspaco <= 0){
+                return nome;
+            }
+
+            var ultimoNome = nome.slice(posicaoUltimoEspaco);
+            console.log('ultimo nome', ultimoNome);
+
+            var primeiroNome = nome.slice(0, posicaoUltimoEspaco);
+            console.log('posicaoUltimoEspaco', posicaoUltimoEspaco);
+
+            return ultimoNome +", " + primeiroNome; 
+        }
+         
+            console.log(nomeFormatado);
+         
+         </script>
+
+     </head>
+     <body>
+         <div class="container">
+             <h1> Desenvolvedor JavaScript 2018</h1>
+
+         </div>
+
+
+
+
+
+     </body>
+
+
+</html>
