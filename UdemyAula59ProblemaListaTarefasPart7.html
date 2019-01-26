@@ -47,14 +47,12 @@
                     
                     $ul.addEventListener('click', function (e){
                         if(e.target.nodeName === 'LI'){
-                            toogleDone(e.target);
-                            removeTask(e.target);
+                           removeTask(e.target);
                         }
                     });
 
                     function removeTask(li){
                         if(confirm("Deseja realmente excluir")){
-                           console.log(li.parentNode);
                            li.parentNode.removeChild(li);
                         }
                     }
