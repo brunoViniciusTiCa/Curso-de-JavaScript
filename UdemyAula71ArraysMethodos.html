@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Curso JavaScript 2018 </title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+          <h1> Curso JavaScript 2018 </h1>
+        
+    </body>
+
+    <script>
+
+        //var arr = [1,2,3,4,5];
+        //var arr = ['cbqcjbq','oi', 'tudo bom?'];
+        var arr = [1,2,3,4,5, 'oi', 'olá'];
+        
+        // EVERY
+        // retorna um boleano de true ou false, porém todos tem que ser verdade.
+        var SoNumeros = arr.every( function(el){
+              return typeof el === 'number';
+
+        });
+        //console.log(SoNumeros);
+
+        // SOME     
+        // retorna um boleano de true ou false, porém ao menos um tem que ser verdade.
+        var aoMenosUmNumero = arr.some( function(el){
+              return typeof el === 'number';
+        });
+        //console.log(aoMenosUmNumero); 
+
+        // FILTER
+        // Ele serve para filtrar aquilo que você quer, no caso eu queria que retornasse apenas numeros, independente se tivesse Array.
+        var numeros = arr.filter( function(el, i, arr){
+              
+              return typeof el === 'number';
+        });
+        ///console.log(numeros)
+
+        //FOREACH usado para fazer loop dentro de um array sem usar o For, do while e While. Muito usado.
+        arr.forEach(function(el,i, arr){
+
+            //console.log('Elemento=', el, '|', 'indice=', i, '|', 'i-', arr.toString());
+        });
+
+        // usando no Array para retorna exatamente a posição daquilo que foi solicitado.
+        var posicaoStr1 = arr.indexOf(2);
+        console.log(posicaoStr1);
+
+        
+
+
+        
+        
+    
+    </script>
+
+
+</html>
