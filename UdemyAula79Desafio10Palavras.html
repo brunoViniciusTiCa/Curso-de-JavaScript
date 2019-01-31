@@ -64,9 +64,12 @@
             }
 
             function formataParagrafos(texto){
+               
+               //Para saber onde termina e começa uma palavra.
+               // onde tiver '  ' espaço ele conta como uma palavra.
                var arr = texto.split(' ');
-               console.log(arr);
-
+              
+               // Limitação de dez palavras.              
                if(arr.length > 10){
                  return arr.slice(0, 10).join(' ') + '...';
                }

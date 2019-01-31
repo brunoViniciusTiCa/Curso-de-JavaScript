@@ -6,15 +6,12 @@
         
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
-        
-        <script src="beluga.js"></script>
-
     </head>
     <body>
         <div class="container">
             <h1>Curso Javascript Completo 2018</h1>
 
-            <button id="btn1" onclick="clicar()"> Botão 1 </button>
+            <button id="btn1"> Botão 1 </button>
             <button id="btn2"> Botão 2 </button>
             <button id="btn3"> Botão 3 </button>
         </div>
@@ -42,7 +39,7 @@
 
         <script>
           
-            var btn2 = document.getElementById("btn2");
+            /*var btn2 = document.getElementById("btn2");
             var btn3 = document.getElementById("btn3"); 
 
             btn2.onclick = clicar;
@@ -70,8 +67,6 @@
             },false);
 
             document.addEventListener('click', function(event){
-                  
-                  
                   console.log('clicou no document');
                   console.log(event.currentTarget);
                   console.log(this);
@@ -79,17 +74,20 @@
                   
             }, false);
 
-            var $ul  = document.querySelector('ul');
-            var $lis = document.querySelectorAll('li');
+            
             
             /*var x = 0;
             while($lis[x]){
-              $lis[x].addEventListener("click", function(e){
-                e.stopPropagation();  
-                console.log('Clicou na li');
-              })
+               $lis[x].addEventListener('click', function(e){
+                  e.stopPropagation();
+                  alert("Clicou na Li");
+               })
               x++;
             };*/
+
+            var $ul  = document.querySelector('ul');
+            
+            //var $lis = document.querySelectorAll('li');
 
             $ul.addEventListener('click', function(e){
                 e.stopPropagation();
@@ -101,11 +99,8 @@
                 if(e.target.nodeName === 'LI'){
                     alert("Clicou na LI");
                 }
-               
+                
             });
-
-            
-
         </script>
         
     </body>

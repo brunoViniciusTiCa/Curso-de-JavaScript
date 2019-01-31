@@ -12,9 +12,10 @@
 
     <script>
 
-        //var arr = [1,2,3,4,5];
-        //var arr = ['cbqcjbq','oi', 'tudo bom?'];
-        var arr = [1,2,3,4,5, 'oi', 'olá'];
+        var arr = [1,2,3,4,5];
+        var arr1 = ['cbqcjbq','oi', 'tudo bom?'];
+        //var arr = [1,2,3,4,5, 'oi', 'olá'];
+        var numero = [1,2,3,4,5];
         
         // EVERY
         // retorna um boleano de true ou false, porém todos tem que ser verdade.
@@ -46,13 +47,85 @@
         });
 
         // usando no Array para retorna exatamente a posição daquilo que foi solicitado.
-        var posicaoStr1 = arr.indexOf(2);
-        console.log(posicaoStr1);
+        var posicaoStr1 = arr.indexOf(2,1);
+        //console.log(posicaoStr1);
 
+        var posicaoStr2 = arr.lastIndexOf(2,1);
+        //console.log(posicaoStr2);
+
+        //console.log(arr);
+        arr = arr.map(function(el, i, arr){
+              return el * i;
+        });
+        //console.log(arr);
+
+        // Serve para concatenar o maximo de arrays possiveis.
+        var arr2 = arr.concat(arr1, 'ola array 2', 100);
+        //console.log(arr2);
+
+        //Join tem quase a mesma função do toString porém, no parametro você pode colocar como quer
+        // que ele seja separado, não precisa ser virgula. Se bota '|' ele aceita, se botar '--' 
+        // ele também aceita, e assim por diante.
+        var str = arr2.join('--');
+        //console.log(str);
+
+
+        // Push, metodo destrutivo ele realmente inclui o que vc colocar. 
+        arr.push('novo Item');
+        //console.log(arr);
+
+        // Para retornar a ultima array.
+        // POP
+        var ultimoItem = arr.pop();
+        //console.log(ultimoItem);
+        //console.log(arr);
+
+        // Metodo shift ele modifica o primeiro ítem.
+        var primeiroItem = arr.shift();
+        //console.log(primeiroItem);
+        //console.log(arr);
+
+       // 
+       arr.unshift(true, false, 'unshift');
+       //console.log(arr);
+
+       // Ele executa a soma de expressão, porém é obrigatorio usar no minimo os dois parametros: Anteriores e atual.
+       // Poderá também usar o indice... Ele somara todos os numeros e dara a resposta da soma.
+       numero.shift();
+       var somadeArrai = numero.reduce(function (anterior, atual, i){
+               // console.log('anterior', anterior, '|' ,'atual', atual , '|' ,'indice', i);
+                return anterior + atual + i;
+       },10);
+       //console.log(numero) 
+       //console.log(somadeArrai);
+
+       var res = ['1','2','3','4', '5'].reduce(function(ant, atual){
+              return ant + atual;
+       });
+       //console.log(res);
+
+       var res1 = ['1','2','3','4', '5'].reduceRight(function(ant, atual){
+              return ant + atual;
+       });
+       //console.log(res1);
+
+       // Ele reverte a ordem das coisas passadas por paramentro de um Array ele também é um metodo Destrutivo.
+       // Se observar a variavel ARR já existia no escopo global, porém quando eu invoquei ela com o metodo reverse,
+       // foi passado um novo valor que ficou como fixo.
+       var arr = [10,20,30];
+       arr.reverse();      
+       //console.log(arr);
+
+       //Metodo Slice
+
+       console.log(arr2.slice(2,5));
+       
+       // Metodo Splice
+       arr2.splice(2, 3, 'limão', 'Melão');
+       console.log(arr2);
         
 
-
-        
+       
         
     
     </script>

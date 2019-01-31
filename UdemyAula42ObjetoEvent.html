@@ -7,7 +7,7 @@
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
         
-        <script src="beluga.js"></script>
+        
 
     </head>
     <body>
@@ -25,51 +25,41 @@
             <div id="d1" style="background: red; padding: 25px">
                 Texto dentro da Div
                 <span style= "background: yellow;">Texto dentro da Span</span>
-
             </div>
-
         </div>
 
         <script>
-          
             var btn2 = document.getElementById("btn2");
             var btn3 = document.getElementById("btn3"); 
 
-          
             btn2.onclick = clicar;
-    
     
             function clicar(){
                 alert("clicou");
             }
 
-            btn3.addEventListener("click", function(){
+            btn3.addEventListener("click", function(evt){
+                console.log(evt);
                 alert("Clicou com DOM level 2");
             });
 
             var $d1 = document.querySelector("#d1");
             var $d1span = document.querySelector("#d1 span");
 
-            $d1.addEventListener('click', function(e){
-                
-                e.stopPropagation();
+            $d1.addEventListener('click', function(){
                 console.log('Clique no $d1');
             },true);
 
             $d1span.addEventListener('click', function(){
-                
-                
                 console.log('Clique no $d1span');
             },true);
 
             document.addEventListener('click', function(event){
-                  
-                  
+                  event.stopPropagation();
                   console.log('clicou no document');
                   console.log(event.currentTarget);
                   console.log(this);
                   console.log(event.target);
-                  
             }, true);
 
         </script>

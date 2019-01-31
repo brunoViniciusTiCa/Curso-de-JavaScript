@@ -52,7 +52,7 @@
                     });
 
                     function removeTask(li){
-                        if(confirm("Deseja realmente excluir")){
+                        if(confirm("Deseja realmente excluir a tarefa? \n" + li.textContent + '?')){
                            li.parentNode.removeChild(li);
                         }
                     }
@@ -65,10 +65,8 @@
                         
                         var li = document.createElement('li');
                         var text = document.createTextNode( $txtTask.value);
-                        
                         li.appendChild(text);
                         $ul.appendChild(li);
-
                         $txtTask.value = '';
                         $txtTask.focus();
                     }

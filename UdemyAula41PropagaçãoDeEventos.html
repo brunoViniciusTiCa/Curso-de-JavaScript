@@ -6,15 +6,12 @@
         
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
-        
-        <script src="beluga.js"></script>
-
     </head>
     <body>
         <div class="container">
             <h1>Curso Javascript Completo 2018</h1>
 
-            <button id="btn1" onclick="clicar()"> Botão 1 </button>
+            <button id="btn1"> Botão 1 </button>
             <button id="btn2"> Botão 2 </button>
             <button id="btn3"> Botão 3 </button>
         </div>
@@ -24,29 +21,32 @@
 
             <div id="d1" style="background: red; padding: 25px">
                 Texto dentro da Div
-                <span style= "background: yellow;">Texto dentro da Span</span>
+            <span style= "background: yellow;">Texto dentro da Span</span>
 
             </div>
 
         </div>
 
         <script>
+            var $btn1 = document.getElementById("btn1");
+            var $btn2 = document.getElementById("btn2");
+            var $btn3 = document.getElementById("btn3"); 
+ 
+             (function(){
+                 
+                $btn1.addEventListener("click", function(){
+                alert("Clicou botão 1");
+                }); 
+
+                $btn2.addEventListener("click", function(){
+                alert("Clicou botão 2");
+                });  
+
+                $btn3.addEventListener("click", function(){
+                alert("Clicou botão 3");
+                }); 
+            })();
           
-            var btn2 = document.getElementById("btn2");
-            var btn3 = document.getElementById("btn3"); 
-
-          
-            btn2.onclick = clicar;
-    
-    
-            function clicar(){
-                alert("clicou");
-            }
-
-            btn3.addEventListener("click", function(){
-                alert("Clicou com DOM level 2");
-            });
-
             var $d1 = document.querySelector("#d1");
             var $d1span = document.querySelector("#d1 span");
 
@@ -59,8 +59,9 @@
             },true);
 
             document.addEventListener('click', function(){
-                  console.log('clicou no document');
+                console.log('clicou no document');
             }, true);
+
 
         </script>
         
